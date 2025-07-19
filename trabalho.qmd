@@ -18,7 +18,7 @@ citation-location: margin
 Neste manual será verificado as funcionalidades do **Git**, **GitHub**, **pip** e conceitos iniciais do **Python**. com demonstrações e passo a passo.
 
 # Git e GitHub
-*Git* é uma ferramenta desenvolvida por Linus Torvalds (criador do Linux) em 2005 baseada em um sistema chamado BitKeeper que passou a ser um serviço pago, o *Git* surge como uma alternativa gratuita porém com metas como ser mais rápido, simples e com Capaz de lidar com projetos grandes como o núcleo o Linux com eficiência (velocidade e tamanho dos dados).
+*Git* é uma ferramenta que permite "versionar" projetos em cada uma de suas etapas. Desenvolvida por Linus Torvalds (criador do Linux) em 2005 baseada em um sistema chamado BitKeeper que passou a ser um serviço pago, o *Git* surge como uma alternativa gratuita porém com metas como ser mais rápido, simples e com Capaz de lidar com projetos grandes como o núcleo o Linux com eficiência (velocidade e tamanho dos dados).
 
 ::: column-margin
 Referências:
@@ -34,4 +34,35 @@ No entanto, a Microsoft afirmou que estava comprometida em manter o GitHub como 
 
 ## Primeiros passos
 
-### Como instalar
+### Como instalar o Git
+O `Git` pode ser baixado livremente no site oficial no link <https://git-scm.com/downloads>, logo selecionando a versão do seu sistema operacional. conforme imagem a baixo 
+
+![Página de download do `Git`](imagens\downloadGIT.png)
+
+::: callout-important
+Siga as indicações do assistente de instalação até que o procedimento seja concluído
+:::
+
+### Como preparar o GitHub
+Diferente do Git, o GitHub apesar de possuir uma versão para desktop não necessita ser instalado para funcionar, pois trata-se de uma plataforma online, porém para utilizar desta ferramenta, será necessário a criação de uma conta gratuita, a conta poderá ser criada no link <https://github.com/> conforme os seguintes passos: 
+
+![Página oficial do `GitHub`](imagens\criarconta.png)
+
+Os campos a seguir deverão ser preenchidas para prosseguir com a criação de conta
+
+![Página de criação de conta](imagens\concluindoconta.png)
+
+Uma vez que a conta tenha sido criada, o usuário estará livre para acessar repositórios e projetos públicos dos demais usuários e também criar repositórios próprios. 
+
+### Como utilizar estas ferramentas
+Em uma pasta vazia, apertando com o botão direito do mouse, podemos então iniciar o painel de comandos do `Git`, denominado "Bash"
+
+![Abrindo o painel "Bash"](imagens\abrindoBash.png)
+
+Para que possamos utlizar destas ferramentas, necessitamos aprender a utilizar os comandos, como por exemplo o `git init` que serve para inicializar o git
+
+![console bash executando o comando `Git init`](imagens\git_init.png)
+
+Logo, pode se executar o comando `Git status` para verificar possíveis mudanças na pasta observada, neste exemplo, utilizemos uma pasta previamente utilizada
+
+![executando `Git status` no bash](imagens\git_status.png)

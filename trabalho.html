@@ -52,7 +52,9 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#primeiros-passos" id="toc-primeiros-passos" class="nav-link" data-scroll-target="#primeiros-passos">Primeiros passos</a>
   <ul class="collapse">
-  <li><a href="#como-instalar" id="toc-como-instalar" class="nav-link" data-scroll-target="#como-instalar">Como instalar</a></li>
+  <li><a href="#como-instalar-o-git" id="toc-como-instalar-o-git" class="nav-link" data-scroll-target="#como-instalar-o-git">Como instalar o Git</a></li>
+  <li><a href="#como-preparar-o-github" id="toc-como-preparar-o-github" class="nav-link" data-scroll-target="#como-preparar-o-github">Como preparar o GitHub</a></li>
+  <li><a href="#como-utilizar-estas-ferramentas" id="toc-como-utilizar-estas-ferramentas" class="nav-link" data-scroll-target="#como-utilizar-estas-ferramentas">Como utilizar estas ferramentas</a></li>
   </ul></li>
   </ul></li>
   </ul>
@@ -91,7 +93,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="git-e-github" class="level1 page-columns page-full">
 <h1>Git e GitHub</h1>
-<p><em>Git</em> é uma ferramenta desenvolvida por Linus Torvalds (criador do Linux) em 2005 baseada em um sistema chamado BitKeeper que passou a ser um serviço pago, o <em>Git</em> surge como uma alternativa gratuita porém com metas como ser mais rápido, simples e com Capaz de lidar com projetos grandes como o núcleo o Linux com eficiência (velocidade e tamanho dos dados).</p>
+<p><em>Git</em> é uma ferramenta que permite “versionar” projetos em cada uma de suas etapas. Desenvolvida por Linus Torvalds (criador do Linux) em 2005 baseada em um sistema chamado BitKeeper que passou a ser um serviço pago, o <em>Git</em> surge como uma alternativa gratuita porém com metas como ser mais rápido, simples e com Capaz de lidar com projetos grandes como o núcleo o Linux com eficiência (velocidade e tamanho dos dados).</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Referências:</p>
@@ -101,8 +103,70 @@ ul.task-list li input[type="checkbox"] {
 <p>No entanto, a Microsoft afirmou que estava comprometida em manter o GitHub como uma plataforma aberta e neutra, continuando a investir em sua expansão e melhorias.</p>
 <section id="primeiros-passos" class="level2">
 <h2 class="anchored" data-anchor-id="primeiros-passos">Primeiros passos</h2>
-<section id="como-instalar" class="level3">
-<h3 class="anchored" data-anchor-id="como-instalar">Como instalar</h3>
+<section id="como-instalar-o-git" class="level3">
+<h3 class="anchored" data-anchor-id="como-instalar-o-git">Como instalar o Git</h3>
+<p>O <code>Git</code> pode ser baixado livremente no site oficial no link <a href="https://git-scm.com/downloads" class="uri">https://git-scm.com/downloads</a>, logo selecionando a versão do seu sistema operacional. conforme imagem a baixo</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imagens\downloadGIT.png" class="img-fluid figure-img"></p>
+<figcaption>Página de download do <code>Git</code></figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Importante
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Siga as indicações do assistente de instalação até que o procedimento seja concluído</p>
+</div>
+</div>
+</section>
+<section id="como-preparar-o-github" class="level3">
+<h3 class="anchored" data-anchor-id="como-preparar-o-github">Como preparar o GitHub</h3>
+<p>Diferente do Git, o GitHub apesar de possuir uma versão para desktop não necessita ser instalado para funcionar, pois trata-se de uma plataforma online, porém para utilizar desta ferramenta, será necessário a criação de uma conta gratuita, a conta poderá ser criada no link <a href="https://github.com/" class="uri">https://github.com/</a> conforme os seguintes passos:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imagens\criarconta.png" class="img-fluid figure-img"></p>
+<figcaption>Página oficial do <code>GitHub</code></figcaption>
+</figure>
+</div>
+<p>Os campos a seguir deverão ser preenchidas para prosseguir com a criação de conta</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imagens\concluindoconta.png" class="img-fluid figure-img"></p>
+<figcaption>Página de criação de conta</figcaption>
+</figure>
+</div>
+<p>Uma vez que a conta tenha sido criada, o usuário estará livre para acessar repositórios e projetos públicos dos demais usuários e também criar repositórios próprios.</p>
+</section>
+<section id="como-utilizar-estas-ferramentas" class="level3">
+<h3 class="anchored" data-anchor-id="como-utilizar-estas-ferramentas">Como utilizar estas ferramentas</h3>
+<p>Em uma pasta vazia, apertando com o botão direito do mouse, podemos então iniciar o painel de comandos do <code>Git</code>, denominado “Bash”</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imagens\abrindoBash.png" class="img-fluid figure-img"></p>
+<figcaption>Abrindo o painel “Bash”</figcaption>
+</figure>
+</div>
+<p>Para que possamos utlizar destas ferramentas, necessitamos aprender a utilizar os comandos, como por exemplo o <code>git init</code> que serve para inicializar o git</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imagens\git_init.png" class="img-fluid figure-img"></p>
+<figcaption>console bash executando o comando <code>Git init</code></figcaption>
+</figure>
+</div>
+<p>Logo, pode se executar o comando <code>Git status</code> para verificar possíveis mudanças na pasta observada, neste exemplo, utilizemos uma pasta previamente utilizada</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imagens\git_status.png" class="img-fluid figure-img"></p>
+<figcaption>executando <code>Git status</code> no bash</figcaption>
+</figure>
+</div>
 </section>
 </section>
 </section>
