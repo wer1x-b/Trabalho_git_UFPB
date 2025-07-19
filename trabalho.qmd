@@ -82,3 +82,14 @@ A vantagem de criar Commit´s ao longo do projeto é que pontos de retorno são 
 alternativamente podemos utilizar o comando ``git log --oneline`` para verificar esta lista de forma mais compacta, veja o exemplo disto abaixo
 
 ![Utilizando o comando ``git log --oneline`` para verificar os commits de forma compacta](imagens\git_logONELINE.png)
+
+Para enviar o projeto junto a todos os conteúdos salvos em commits, utilizaremos o comando ``git push origin`` caso tenhamos clonado a pasta previamente em repositório ou colocamos o link do repositório ao invés de "origin" e então o Git irá agir em conjunto com o Github
+
+![Utilizando o comando ``git push origin`` para enviar os commits direto para o repositório no GitHub](imagens/git_push.png)
+
+Alternativamente temos o ``git pull`` que faz o inverso do comando anterior, pois ele "puxa" os arquivos do GitHub para o computador.
+
+# pip
+
+## o que é o pip?
+Trata-se de um instalador de pacotes para o python
