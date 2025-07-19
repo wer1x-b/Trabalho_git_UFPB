@@ -1,0 +1,37 @@
+---
+title: "Primeira Avaliação: Relatório em Quarto + GitHub"
+author: "Wericky Barbosa de Melo"
+lang: pt # Linguagem em português
+format:
+  html:
+    theme: default
+    toc: true
+    grid:
+      margin-width: 300px
+execute:
+  echo: true
+reference-location: margin
+citation-location: margin
+---
+
+# Apresentação 
+Neste manual será verificado as funcionalidades do **Git**, **GitHub**, **pip** e conceitos iniciais do **Python**. com demonstrações e passo a passo.
+
+# Git e GitHub
+*Git* é uma ferramenta desenvolvida por Linus Torvalds (criador do Linux) em 2005 baseada em um sistema chamado BitKeeper que passou a ser um serviço pago, o *Git* surge como uma alternativa gratuita porém com metas como ser mais rápido, simples e com Capaz de lidar com projetos grandes como o núcleo o Linux com eficiência (velocidade e tamanho dos dados).
+
+::: column-margin
+Referências:
+
+[Site oficial do Git](https://git-scm.com/book/pt-br/v2/Come%C3%A7ando-Uma-Breve-Hist%C3%B3ria-do-Git)
+
+[Site oficial do GitHub](https://github.com/about?locale=pt-BR)
+:::
+
+O *GitHub* foi fundado em 2008 por Tom Preston-Werner, Chris Wanstrath e PJ Hyett. Ele começou como uma plataforma de hospedagem de código baseada em Git, permitindo que desenvolvedores colaborassem em projetos de software, rastreassem mudanças e gerenciassem o código-fonte de forma eficiente. Em junho de 2018, a Microsoft anunciou a aquisição do GitHub por US$ 7,5 bilhões em ações. Essa aquisição foi uma surpresa para muitos na comunidade de desenvolvedores, pois o GitHub sempre foi visto como uma empresa independente e uma defensora fervorosa do software de código aberto.
+
+No entanto, a Microsoft afirmou que estava comprometida em manter o GitHub como uma plataforma aberta e neutra, continuando a investir em sua expansão e melhorias.
+
+## Primeiros passos
+
+### Como instalar
