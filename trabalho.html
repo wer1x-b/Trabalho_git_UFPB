@@ -160,11 +160,39 @@ Importante
 <figcaption>console bash executando o comando <code>Git init</code></figcaption>
 </figure>
 </div>
-<p>Logo, pode se executar o comando <code>Git status</code> para verificar possíveis mudanças na pasta observada, neste exemplo, utilizemos uma pasta previamente utilizada</p>
+<p>Logo, pode se executar o comando <code>git status</code> para verificar possíveis mudanças na pasta observada, neste exemplo, utilizemos uma pasta previamente utilizada</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imagens\git_status.png" class="img-fluid figure-img"></p>
 <figcaption>executando <code>Git status</code> no bash</figcaption>
+</figure>
+</div>
+<p>Note que neste exemplo, ouveram 2 modificações, marcadas por “modified” e então podemos adicionar estas modificações com o comando <code>git add .</code> <em>o espaço e o ponto significam que será adicionado todas as modificações</em></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imagens\git_add.png" class="img-fluid figure-img"></p>
+<figcaption>executando o comando <code>Git add .</code> no bash</figcaption>
+</figure>
+</div>
+<p>Uma vez que todas as modificações desejadas foram adicionadas, pode-se criar uma espécie de “checkpoint” ou seja, um ponto onde o progresso seja salvo, utilizando de um comando chamado de <code>git commit</code></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imagens\git_commit.png" class="img-fluid figure-img"></p>
+<figcaption>criando um <code>Git commit</code> no bash</figcaption>
+</figure>
+</div>
+<p>A vantagem de criar Commit´s ao longo do projeto é que pontos de retorno são criados, da seguinte forma, podemos regressar a determinadas etapas do progresso, como uma espécie de “viagem no tempo” revertendo todo o projeto, etapas e arquivos ao exato ponto do commit escolhido, para visualizar os commits, pode ser utilizado o comando <code>git log</code></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imagens\git_log.png" class="img-fluid figure-img"></p>
+<figcaption>Utilizando o comando <code>git log</code> para verificar os commits</figcaption>
+</figure>
+</div>
+<p>alternativamente podemos utilizar o comando <code>git log --oneline</code> para verificar esta lista de forma mais compacta, veja o exemplo disto abaixo</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imagens\git_logONELINE.png" class="img-fluid figure-img"></p>
+<figcaption>Utilizando o comando <code>git log --oneline</code> para verificar os commits de forma compacta</figcaption>
 </figure>
 </div>
 </section>

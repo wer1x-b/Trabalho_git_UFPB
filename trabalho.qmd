@@ -63,6 +63,22 @@ Para que possamos utlizar destas ferramentas, necessitamos aprender a utilizar o
 
 ![console bash executando o comando `Git init`](imagens\git_init.png)
 
-Logo, pode se executar o comando `Git status` para verificar possíveis mudanças na pasta observada, neste exemplo, utilizemos uma pasta previamente utilizada
+Logo, pode se executar o comando `git status` para verificar possíveis mudanças na pasta observada, neste exemplo, utilizemos uma pasta previamente utilizada
 
 ![executando `Git status` no bash](imagens\git_status.png)
+
+Note que neste exemplo, ouveram 2 modificações, marcadas por "modified" e então podemos adicionar estas modificações com o comando ``git add .`` *o espaço e o ponto significam que será adicionado todas as modificações*
+
+![executando o comando `Git add .` no bash](imagens\git_add.png)
+
+Uma vez que todas as modificações desejadas foram adicionadas, pode-se criar uma espécie de "checkpoint" ou seja, um ponto onde o progresso seja salvo, utilizando de um comando chamado de ``git commit``
+
+![criando um ``Git commit`` no bash](imagens\git_commit.png)
+
+A vantagem de criar Commit´s ao longo do projeto é que pontos de retorno são criados, da seguinte forma, podemos regressar a determinadas etapas do progresso, como uma espécie de "viagem no tempo" revertendo todo o projeto, etapas e arquivos ao exato ponto do commit escolhido, para visualizar os commits, pode ser utilizado o comando ``git log``
+
+![Utilizando o comando ``git log`` para verificar os commits](imagens\git_log.png)
+
+alternativamente podemos utilizar o comando ``git log --oneline`` para verificar esta lista de forma mais compacta, veja o exemplo disto abaixo
+
+![Utilizando o comando ``git log --oneline`` para verificar os commits de forma compacta](imagens\git_logONELINE.png)
