@@ -21,6 +21,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -57,9 +92,14 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#como-utilizar-estas-ferramentas" id="toc-como-utilizar-estas-ferramentas" class="nav-link" data-scroll-target="#como-utilizar-estas-ferramentas">Como utilizar estas ferramentas</a></li>
   </ul></li>
   </ul></li>
-  <li><a href="#pip" id="toc-pip" class="nav-link" data-scroll-target="#pip">pip</a>
+  <li><a href="#python" id="toc-python" class="nav-link" data-scroll-target="#python">Python</a>
   <ul class="collapse">
-  <li><a href="#o-que-é-o-pip" id="toc-o-que-é-o-pip" class="nav-link" data-scroll-target="#o-que-é-o-pip">o que é o pip?</a></li>
+  <li><a href="#como-instalar" id="toc-como-instalar" class="nav-link" data-scroll-target="#como-instalar">Como instalar</a></li>
+  <li><a href="#o-que-é-o-pip" id="toc-o-que-é-o-pip" class="nav-link" data-scroll-target="#o-que-é-o-pip">O que é o pip?</a>
+  <ul class="collapse">
+  <li><a href="#como-instalar-pacotes-com-o-pip" id="toc-como-instalar-pacotes-com-o-pip" class="nav-link" data-scroll-target="#como-instalar-pacotes-com-o-pip">Como instalar pacotes com o pip</a></li>
+  </ul></li>
+  <li><a href="#aprendendo-o-básico" id="toc-aprendendo-o-básico" class="nav-link" data-scroll-target="#aprendendo-o-básico">Aprendendo o básico</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -158,6 +198,7 @@ Importante
 </figure>
 </div>
 <p>Para que possamos utlizar destas ferramentas, necessitamos aprender a utilizar os comandos, como por exemplo o <code>git init</code> que serve para inicializar o git</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> init</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imagens\git_init.png" class="img-fluid figure-img"></p>
@@ -165,13 +206,16 @@ Importante
 </figure>
 </div>
 <p>Logo, pode se executar o comando <code>git status</code> para verificar possíveis mudanças na pasta observada, neste exemplo, utilizemos uma pasta previamente utilizada</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imagens\git_status.png" class="img-fluid figure-img"></p>
 <figcaption>executando <code>Git status</code> no bash</figcaption>
 </figure>
 </div>
-<p>Note que neste exemplo, ouveram 2 modificações, marcadas por “modified” e então podemos adicionar estas modificações com o comando <code>git add .</code> <em>o espaço e o ponto significam que será adicionado todas as modificações</em></p>
+<p>Note que neste exemplo, ouveram 2 modificações, marcadas por “modified” e então podemos adicionar estas modificações com o comando <code>git add .</code></p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><em>o espaço e o ponto significam que será adicionado todas as modificações</em></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imagens\git_add.png" class="img-fluid figure-img"></p>
@@ -179,6 +223,7 @@ Importante
 </figure>
 </div>
 <p>Uma vez que todas as modificações desejadas foram adicionadas, pode-se criar uma espécie de “checkpoint” ou seja, um ponto onde o progresso seja salvo, utilizando de um comando chamado de <code>git commit</code></p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imagens\git_commit.png" class="img-fluid figure-img"></p>
@@ -186,6 +231,7 @@ Importante
 </figure>
 </div>
 <p>A vantagem de criar Commit´s ao longo do projeto é que pontos de retorno são criados, da seguinte forma, podemos regressar a determinadas etapas do progresso, como uma espécie de “viagem no tempo” revertendo todo o projeto, etapas e arquivos ao exato ponto do commit escolhido, para visualizar os commits, pode ser utilizado o comando <code>git log</code></p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> log</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imagens\git_log.png" class="img-fluid figure-img"></p>
@@ -193,6 +239,7 @@ Importante
 </figure>
 </div>
 <p>alternativamente podemos utilizar o comando <code>git log --oneline</code> para verificar esta lista de forma mais compacta, veja o exemplo disto abaixo</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> log <span class="at">--oneline</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imagens\git_logONELINE.png" class="img-fluid figure-img"></p>
@@ -206,15 +253,81 @@ Importante
 <figcaption>Utilizando o comando <code>git push origin</code> para enviar os commits direto para o repositório no GitHub</figcaption>
 </figure>
 </div>
+<p>Agora, indo até o repositório no GitHub, podemos ver que toda a pasta foi adicionada ao repositório</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imagens\github.png" class="img-fluid figure-img"></p>
+<figcaption>Note os arquivos da pasta no repositório</figcaption>
+</figure>
+</div>
 <p>Alternativamente temos o <code>git pull</code> que faz o inverso do comando anterior, pois ele “puxa” os arquivos do GitHub para o computador.</p>
+<p>Agora que os arquivos estão salvos no repositório, é possível clonar os arquivos para o computador, usanco o comando <code>git clone</code>, acompanhado do <strong>url</strong> do repositório, como mostrado a seguir:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imagens\urlclone.png" class="img-fluid figure-img"></p>
+<figcaption>local de obtenção do url</figcaption>
+</figure>
+</div>
+<p>e então o código poderá ser executado do <code>bash</code> da seguinte forma:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imagens\git_clone.png" class="img-fluid figure-img"></p>
+<figcaption>execução do comando</figcaption>
+</figure>
+</div>
 </section>
 </section>
 </section>
-<section id="pip" class="level1">
-<h1>pip</h1>
+<section id="python" class="level1">
+<h1>Python</h1>
+<section id="como-instalar" class="level2">
+<h2 class="anchored" data-anchor-id="como-instalar">Como instalar</h2>
+<p>O Python pode ser instalado a partir do site oficial do Python no seguinte link <a href="https://www.python.org/downloads/" class="uri">https://www.python.org/downloads/</a> e então seguindo o passo a passo de instação</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imagens\instalarpython.png" class="img-fluid figure-img"></p>
+<figcaption>Site oficial</figcaption>
+</figure>
+</div>
+</section>
 <section id="o-que-é-o-pip" class="level2">
-<h2 class="anchored" data-anchor-id="o-que-é-o-pip">o que é o pip?</h2>
-<p>Trata-se de um instalador de pacotes para o python</p>
+<h2 class="anchored" data-anchor-id="o-que-é-o-pip">O que é o pip?</h2>
+<p>Trata-se de um sistema de gerenciamento de pacotes padrão, ele permite instalar, gerenciar e desinstalar pacotes escritos em <code>python</code>. Inclusive o pip já vem pré-instalado juntamente à distribuição do Python escolhida, no caso de não estar instalada ainda, basta executar o seguinte comando no prompt de comando de seu sistema:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install pip</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="como-instalar-pacotes-com-o-pip" class="level3">
+<h3 class="anchored" data-anchor-id="como-instalar-pacotes-com-o-pip">Como instalar pacotes com o pip</h3>
+<p>Primeiramente, é interessante explicar o que é um pacote de python, trata-se de arquivos em <code>.py</code> que contém funções denominadas “módulos” construídas por outros usuários e disponibilizadas no repositorio <code>PyPi</code>, O conjunto de pacotes chama-se “biblioteca”. Em termos mais simples, pode-se entender da seguinte forma:</p>
+<ul>
+<li>Módulo é uma ferramenta específica;</li>
+<li>Pacote é uma caixa de ferramentas;</li>
+<li>Biblioteca é como um armário com todas as caixas e ferramentas devidamente organizadas</li>
+</ul>
+<p>Os pacotes são instalados diretamente pelo terminal de seu sistema operacional, pode-se seguir os seguintes passos</p>
+<ol type="1">
+<li>Abra o terminal de seu sistema operacional, seja ele <code>powershell</code>, <code>cmd</code> ou qualquer outro de sua preferência e executar o comando</li>
+</ol>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install <span class="op">&lt;</span>nome do pacote<span class="op">&gt;</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol start="2" type="1">
+<li>Execute o comando de instalação, neste exemplo instalaremos o pacote <code>requests</code> que serve para facilitar o envio e recebimento de requisições HTTP, que são usadas para interagir com APIs e servidores web. instalaremos da seguinte forma:</li>
+</ol>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install requests</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imagens\pipinstall.png" class="img-fluid figure-img"></p>
+<figcaption>O sistema irá procurar e baixar os arquivos</figcaption>
+</figure>
+</div>
+<p>Dentre as bibliotecas mais populares estão:</p>
+<ul>
+<li><code>Numpy</code> é usada para cálculos numéricos de alta performance em Python. Ela é a base de muitas outras bibliotecas científicas, como Pandas, SciPy, Scikit-learn e até TensorFlow.</li>
+<li><code>Pandas</code> Esta biblioteca é usada para facilitar o trabalho com dados estruturados, como tabelas, planilhas, bancos de dados, entre outros. Muito utilizado em ciência de dados e machine learning.</li>
+<li><code>matplotlib</code> serve para criar gráficos e visualizações de dados em Python. É uma das bibliotecas mais populares e versáteis para isso.</li>
+</ul>
+</section>
+</section>
+<section id="aprendendo-o-básico" class="level2">
+<h2 class="anchored" data-anchor-id="aprendendo-o-básico">Aprendendo o básico</h2>
 </section>
 </section>
 
