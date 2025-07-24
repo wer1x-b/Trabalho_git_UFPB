@@ -105,6 +105,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#tipos-de-dados" id="toc-tipos-de-dados" class="nav-link" data-scroll-target="#tipos-de-dados">Tipos de dados</a></li>
   </ul></li>
   <li><a href="#variáveis-e-operadores-básicos" id="toc-variáveis-e-operadores-básicos" class="nav-link" data-scroll-target="#variáveis-e-operadores-básicos">Variáveis e operadores básicos</a></li>
+  <li><a href="#listas-tuplas-e-dicionários" id="toc-listas-tuplas-e-dicionários" class="nav-link" data-scroll-target="#listas-tuplas-e-dicionários">Listas, tuplas e dicionários</a>
+  <ul class="collapse">
+  <li><a href="#listas-list" id="toc-listas-list" class="nav-link" data-scroll-target="#listas-list">Listas (<code>list</code>)</a></li>
+  <li><a href="#tuplas-tuple" id="toc-tuplas-tuple" class="nav-link" data-scroll-target="#tuplas-tuple">Tuplas (<code>tuple</code>)</a></li>
+  <li><a href="#dicionários-dict" id="toc-dicionários-dict" class="nav-link" data-scroll-target="#dicionários-dict">Dicionários (<code>dict</code>)</a></li>
+  </ul></li>
+  <li><a href="#estruturas-de-controle" id="toc-estruturas-de-controle" class="nav-link" data-scroll-target="#estruturas-de-controle">Estruturas de controle</a>
+  <ul class="collapse">
+  <li><a href="#condicionais" id="toc-condicionais" class="nav-link" data-scroll-target="#condicionais">Condicionais</a></li>
+  <li><a href="#laços-de-repetição-loop" id="toc-laços-de-repetição-loop" class="nav-link" data-scroll-target="#laços-de-repetição-loop">Laços de repetição (loop)</a></li>
+  <li><a href="#controle-de-fluxo-extra" id="toc-controle-de-fluxo-extra" class="nav-link" data-scroll-target="#controle-de-fluxo-extra">Controle de fluxo extra</a></li>
+  </ul></li>
+  <li><a href="#funções-definição-com-def-parâmetros-e-retorno" id="toc-funções-definição-com-def-parâmetros-e-retorno" class="nav-link" data-scroll-target="#funções-definição-com-def-parâmetros-e-retorno">Funções: definição com <code>def</code>, parâmetros e retorno</a>
+  <ul class="collapse">
+  <li><a href="#def-é-utilizado-para-iniciar-a-definição-da-função" id="toc-def-é-utilizado-para-iniciar-a-definição-da-função" class="nav-link" data-scroll-target="#def-é-utilizado-para-iniciar-a-definição-da-função"><code>def</code> é utilizado para iniciar a definição da função</a></li>
+  <li><a href="#parâmetros" id="toc-parâmetros" class="nav-link" data-scroll-target="#parâmetros">Parâmetros</a></li>
+  <li><a href="#retorno-return" id="toc-retorno-return" class="nav-link" data-scroll-target="#retorno-return">Retorno (<code>return</code>)</a></li>
+  </ul></li>
   </ul></li>
   </ul>
 </nav>
@@ -350,11 +368,11 @@ Importante
 <ul>
 <li><strong>int</strong> são valores numéricos positivos ou negativos, desconsiderando a parte decimal, utilizado em operações matemáticas ou contagens, como por exemplo</li>
 </ul>
-<div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">{-1000,...,</span> <span class="at">-1,</span> 0, 1, ..., 50}</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>{<span class="op">-</span><span class="dv">1000</span>,..., <span class="op">-</span><span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>, ..., <span class="dv">50</span>}</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
 <li><strong>float</strong> Representa os valores númericos reais com a parte decimal, Utilizado em operações com números não inteiros e medições, por exemplo</li>
 </ul>
-<div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">{14.1,</span> 3.14, 0.001}</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>{<span class="fl">14.1</span>, <span class="fl">3.14</span>, <span class="fl">0.001</span>}</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
 <li><strong>str</strong> Representa um texto ou sequência de caracteres, usado para armazenar e manipular informações textuais, por exemplo</li>
 </ul>
@@ -542,6 +560,154 @@ Importante
 </tr>
 </tbody>
 </table>
+</section>
+<section id="listas-tuplas-e-dicionários" class="level2">
+<h2 class="anchored" data-anchor-id="listas-tuplas-e-dicionários">Listas, tuplas e dicionários</h2>
+<p>Estas são como coleções de elementos, que podem ou não ser <strong>ordenadas</strong>, ou seja, mantendo a ordem de cada elemento ou não. Também podem ou não ser <strong>mutáveis</strong> admitindo ou não alterações.</p>
+<section id="listas-list" class="level3">
+<h3 class="anchored" data-anchor-id="listas-list">Listas (<code>list</code>)</h3>
+<p>São utilizadas quando os elementos precisam ser modificados, reordenados ou acessados frequentemente.</p>
+<ul>
+<li>mutáveis</li>
+<li>ordenadas</li>
+<li>permitem ter valores repetidos</li>
+</ul>
+<p>Exemplo de utilização:</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>frutas <span class="op">=</span> [<span class="st">'maçã'</span>, <span class="st">'banana'</span>, <span class="st">'laranja'</span>]</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>frutas.append(<span class="st">'abacaxi'</span>)       <span class="co"># Adiciona ao final</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>frutas.insert(<span class="dv">1</span>, <span class="st">'melancia'</span>)   <span class="co"># Insere na posição específica</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>frutas.remove(<span class="st">'banana'</span>)        <span class="co"># Remove o item</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>frutas.sort()                  <span class="co"># Ordena</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="tuplas-tuple" class="level3">
+<h3 class="anchored" data-anchor-id="tuplas-tuple">Tuplas (<code>tuple</code>)</h3>
+<p>São utilizadas quando os elementos não serão alterados, como datas fixas ou coordenadas por exemplo</p>
+<ul>
+<li>Imutáveis</li>
+<li>Ordenadas, assim como as <code>listas</code></li>
+<li>Permitem valores repetidos</li>
+</ul>
+<p>Exemplo de utilização:</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>coordenadas <span class="op">=</span> (<span class="fl">10.5</span>, <span class="fl">20.3</span>)</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>cores <span class="op">=</span> (<span class="st">'vermelho'</span>, <span class="st">'verde'</span>, <span class="st">'azul'</span>)</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(cores[<span class="dv">0</span>])  <span class="co"># Acessa, mas não pode modificar</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="dicionários-dict" class="level3">
+<h3 class="anchored" data-anchor-id="dicionários-dict">Dicionários (<code>dict</code>)</h3>
+<p>São utilizadas para representar informações com rótulos, podem ser utilizadas em bancos de dados simples ou perfis de usuário por exemplo</p>
+<ul>
+<li>Mutáveis</li>
+<li>Não ordenadas</li>
+</ul>
+<p>Exemplo de utilização:</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>usuario <span class="op">=</span> {</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'nome'</span>: <span class="st">'Robson'</span>,</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'idade'</span>: <span class="dv">25</span>,</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">'cidade'</span>: <span class="st">'João Pessoa'</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>usuario[<span class="st">'idade'</span>] <span class="op">+=</span> <span class="dv">1</span>          <span class="co"># Atualiza valor</span></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>usuario[<span class="st">'email'</span>] <span class="op">=</span> <span class="st">'email.qualquer@email.com'</span>  <span class="co"># Adiciona nova chave</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="estruturas-de-controle" class="level2">
+<h2 class="anchored" data-anchor-id="estruturas-de-controle">Estruturas de controle</h2>
+<p>Essas estruturas são o que dão vida ao código, o tornando capaz de tomar decisões ou realizar repetições com base em lógica. As estruturas podem ser <strong>condicionais</strong>, <strong>laços de repetição</strong> ou <strong>Controle de fluxo extra</strong></p>
+<section id="condicionais" class="level3">
+<h3 class="anchored" data-anchor-id="condicionais">Condicionais</h3>
+<p>São utilizadas para aplicar condições, determinando alguma ação que possa ou não ocorrer de acordo com o valor do elemento, são elas <code>if</code>, <code>elif</code> e <code>else</code></p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>idade <span class="op">=</span> <span class="dv">20</span>                    <span class="co">#Dados fornecidos</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> idade <span class="op">&gt;=</span> <span class="dv">18</span>:              </span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Maior de idade"</span>)</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> idade <span class="op">&gt;=</span> <span class="dv">13</span>:             </span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Adolescente"</span>)</span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:                         </span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Criança"</span>)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Neste exemplo, o <code>if</code> aplica uma condição inicial (Neste caso a idade ser maior o igual a 18), o <code>elif</code> aplica uma condição secundária para ser executada no caso da condição anterior não tiver sido satisfeita, por fim o <code>else</code> atua caso as condições anteriores não tenham sido satisfeitas.</p>
+</section>
+<section id="laços-de-repetição-loop" class="level3">
+<h3 class="anchored" data-anchor-id="laços-de-repetição-loop">Laços de repetição (loop)</h3>
+<p>São usados para gerar loops, ou seja, repetir determinado comando até a condição ser satisfeita, são elas <code>for</code> e <code>while</code>.</p>
+<section id="exemplo-de-utilização-de-for" class="level4">
+<h4 class="anchored" data-anchor-id="exemplo-de-utilização-de-for">Exemplo de utilização de <code>for</code></h4>
+<div class="sourceCode" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>nomes <span class="op">=</span> [<span class="st">'Ana'</span>, <span class="st">'Bruno'</span>, <span class="st">'Carlos'</span>]</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> nome <span class="kw">in</span> nomes:</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Olá, </span><span class="sc">{</span>nome<span class="sc">}</span><span class="ss">!"</span>)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Este loop executa uma lista com os uma saudação a todos os nomes presentes na lista.</p>
+</section>
+<section id="exemplo-de-utilização-de-while" class="level4">
+<h4 class="anchored" data-anchor-id="exemplo-de-utilização-de-while">Exemplo de utilização de <code>while</code></h4>
+<div class="sourceCode" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>contador <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> contador <span class="op">&lt;</span> <span class="dv">5</span>:</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(contador)</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>    contador <span class="op">+=</span> <span class="dv">1</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Este loop com <code>while</code> executa o comando enquanto a condição for verdadeira, neste caso, o elemento recebe +1 até que o contador seja &gt;=5</p>
+</section>
+</section>
+<section id="controle-de-fluxo-extra" class="level3">
+<h3 class="anchored" data-anchor-id="controle-de-fluxo-extra">Controle de fluxo extra</h3>
+<p>São utilizados para interromper, continuar ou ignorar determinados códigos, são utilizados <code>break</code>, <code>continue</code> e <code>pass</code>.</p>
+<section id="exemplo-de-utilização-de-break" class="level4">
+<h4 class="anchored" data-anchor-id="exemplo-de-utilização-de-break">Exemplo de utilização de <code>break</code></h4>
+<p>É utilizado para interromper o loop imediatamente, da seguinte forma:</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>senha_correta <span class="op">=</span> <span class="st">"python123"</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> tentativa <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">3</span>):</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>    senha <span class="op">=</span> <span class="bu">input</span>(<span class="st">"Digite a senha: "</span>)</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> senha <span class="op">==</span> senha_correta:</span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"Acesso permitido"</span>)</span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">break</span></span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"Senha incorreta"</span>)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="exemplo-de-utilização-de-continue" class="level4">
+<h4 class="anchored" data-anchor-id="exemplo-de-utilização-de-continue">Exemplo de utilização de <code>continue</code></h4>
+<p>É utilizado para pular para a próxima iteração, da seguinte forma:</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>numeros <span class="op">=</span> [<span class="dv">5</span>, <span class="op">-</span><span class="dv">3</span>, <span class="dv">8</span>, <span class="dv">0</span>, <span class="op">-</span><span class="dv">1</span>]</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> n <span class="kw">in</span> numeros:</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> n <span class="op">&lt;</span> <span class="dv">0</span>:</span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">continue</span></span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Número positivo ou zero: </span><span class="sc">{</span>n<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="exemlo-de-utilização-de-pass" class="level4">
+<h4 class="anchored" data-anchor-id="exemlo-de-utilização-de-pass">Exemlo de utilização de <code>pass</code></h4>
+<p>Este normalmente é utilizado durante o planejamento do código, pulando passar para a próxima iteração sem quebrar a estrutura, da seguinte forma:</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> letra <span class="kw">in</span> <span class="st">"Python"</span>:</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> letra <span class="op">==</span> <span class="st">"h"</span>:</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">pass</span>  <span class="co"># Em breve vamos fazer algo aqui...</span></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(letra)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+</section>
+<section id="funções-definição-com-def-parâmetros-e-retorno" class="level2">
+<h2 class="anchored" data-anchor-id="funções-definição-com-def-parâmetros-e-retorno">Funções: definição com <code>def</code>, parâmetros e retorno</h2>
+<p>Funções são determinadas partes de código que podem ser reutilizáveis para realizar tarefas específicas, ajudando a manter o código organizado e evitando repetições, tornando o código mais legível.</p>
+<section id="def-é-utilizado-para-iniciar-a-definição-da-função" class="level3">
+<h3 class="anchored" data-anchor-id="def-é-utilizado-para-iniciar-a-definição-da-função"><code>def</code> é utilizado para iniciar a definição da função</h3>
+<div class="sourceCode" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> saudacao(): </span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Olá, Wericky! Seja bem-vindo."</span>)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Aqui temos “<code>saudacao</code>” é o nome da função, os <code>()</code> indicam que não receberá nenhum parâmentro, o corpo da função é todo o identado abaixo.</p>
+</section>
+<section id="parâmetros" class="level3">
+<h3 class="anchored" data-anchor-id="parâmetros">Parâmetros</h3>
+<p>Permitem que a função receba informações externas para trabalhar com elas, para esta demonstração, utilizemos o exemplo anterior, adicionando o parâmetro:</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> saudacao_pessoal(nome):</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Olá, </span><span class="sc">{</span>nome<span class="sc">}</span><span class="ss">! Tudo certo?"</span>)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>“nome” é o parâmetro adicionado neste exemplo, a função <code>def</code> irá pegar o elemento adicionado com este rótulo e utilizará seu valor atribuído</p>
+</section>
+<section id="retorno-return" class="level3">
+<h3 class="anchored" data-anchor-id="retorno-return">Retorno (<code>return</code>)</h3>
+<p>Permite que a função devolva um valor para ser usado em outro lugar. conforme o exemplo:</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> soma(a, b):</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> a <span class="op">+</span> b</span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>resultado <span class="op">=</span> soma(<span class="dv">3</span>, <span class="dv">5</span>)</span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"A soma é: </span><span class="sc">{</span>resultado<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>A função neste caso calcula e devolve o valor com o <code>return</code>, então o código foi armazenado como “resultado”.</p>
+</section>
 </section>
 </section>
 

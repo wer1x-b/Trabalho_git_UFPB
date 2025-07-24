@@ -1,2 +1,2 @@
-# Trabalho_git_UFPB
-Trabalho para a 1ª nota da cadeira de introdução aos softwares estatísticos
+# Trabalho para a 1ª nota da cadeira de introdução aos softwares estatísticos
+Este trabalho foi construído como um manual básico abordando como instalar e utilizar o `Git`, criar conta e utilizar o `GitHub`, além de apresesentar o básico do uso do `pip` para a instalação de pacotes Python. Além de um breve vislumbre cobrindo o básico do `Python`.

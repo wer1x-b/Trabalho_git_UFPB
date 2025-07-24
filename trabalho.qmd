@@ -133,14 +133,12 @@ O Python pode ser instalado a partir do site oficial do Python no seguinte link 
 ![Site oficial](imagens\instalarpython.png)
 
 ## O que é o pip?
-
 Trata-se de um sistema de gerenciamento de pacotes padrão, ele permite instalar, gerenciar e desinstalar pacotes escritos em ``python``. Inclusive o pip já vem pré-instalado juntamente à distribuição do Python escolhida, no caso de não estar instalada ainda, basta executar o seguinte comando no prompt de comando de seu sistema:
 ``` bash
 pip install pip
 ```
 
 ### Como instalar pacotes com o pip 
-
 Primeiramente, é interessante explicar o que é um pacote de python, trata-se de arquivos em ``.py`` que contém funções denominadas "módulos" construídas por outros usuários e disponibilizadas no repositorio ``PyPi``, O conjunto de pacotes chama-se "biblioteca".
 Em termos mais simples, pode-se entender da seguinte forma:
 
@@ -178,16 +176,15 @@ Integrated Development Environment (IDE) significa ambiente de desenvolvimento i
 - Spyder.
 
 ### Tipos de dados
-
 Os dados em python podem ser do tipo ``int``, ``float``, ``str`` e ``bool``
 
 - **int** são valores numéricos positivos ou negativos, desconsiderando a parte decimal, utilizado em operações matemáticas ou contagens, como por exemplo 
-``` bash
+``` python
 {-1000,..., -1, 0, 1, ..., 50}
 ```
 
 - **float** Representa os valores númericos reais com a parte decimal, Utilizado em operações com números não inteiros e medições, por exemplo
-``` bash
+``` python
 {14.1, 3.14, 0.001}
 ```
 
@@ -228,3 +225,159 @@ Os dados em python podem ser do tipo ``int``, ``float``, ``str`` e ``bool``
 | Atribuição  | /=       | Divisão e atribuição       | y /= 5             | y = y / 5     |
 | Atribuição  | **=      | Potência e atribuição      | y **= 3            | y = y         |
 
+## Listas, tuplas e dicionários
+Estas são como coleções de elementos, que podem ou não ser  **ordenadas**, ou seja, mantendo a ordem de cada elemento ou não.
+Também podem ou não ser **mutáveis** admitindo ou não alterações.
+
+### Listas (`list`)
+São utilizadas quando os elementos precisam ser modificados, reordenados ou acessados frequentemente.
+
+- mutáveis
+- ordenadas
+- permitem ter valores repetidos
+
+Exemplo de utilização:
+``` python
+frutas = ['maçã', 'banana', 'laranja']
+frutas.append('abacaxi')       # Adiciona ao final
+frutas.insert(1, 'melancia')   # Insere na posição específica
+frutas.remove('banana')        # Remove o item
+frutas.sort()                  # Ordena
+```
+
+### Tuplas (`tuple`)
+São utilizadas quando os elementos não serão alterados, como datas fixas ou coordenadas por exemplo
+
+- Imutáveis
+- Ordenadas, assim como as `listas`
+- Permitem valores repetidos
+
+Exemplo de utilização:
+``` python
+coordenadas = (10.5, 20.3)
+
+cores = ('vermelho', 'verde', 'azul')
+print(cores[0])  # Acessa, mas não pode modificar
+```
+
+### Dicionários (`dict`)
+São utilizadas para representar informações com rótulos, podem ser utilizadas em bancos de dados simples ou perfis de usuário por exemplo
+
+- Mutáveis
+- Não ordenadas
+
+Exemplo de utilização:
+``` python
+usuario = {
+    'nome': 'Robson',
+    'idade': 25,
+    'cidade': 'João Pessoa'
+}
+usuario['idade'] += 1          # Atualiza valor
+usuario['email'] = 'email.qualquer@email.com'  # Adiciona nova chave
+```
+
+## Estruturas de controle
+Essas estruturas são o que dão vida ao código, o tornando capaz de tomar decisões ou realizar repetições com base em lógica.
+As estruturas podem ser **condicionais**, **laços de repetição** ou **Controle de fluxo extra**
+
+### Condicionais
+São utilizadas para aplicar condições, determinando alguma ação que possa ou não ocorrer de acordo com o valor do elemento, são elas `if`, `elif` e `else`
+
+``` python
+idade = 20                    #Dados fornecidos
+
+if idade >= 18:              
+    print("Maior de idade")
+elif idade >= 13:             
+    print("Adolescente")
+else:                         
+    print("Criança")
+```
+Neste exemplo, o `if` aplica uma condição inicial (Neste caso a idade ser maior o igual a 18), o `elif` aplica uma condição secundária para ser executada no caso da condição anterior não tiver sido satisfeita, por fim o `else` atua caso as condições anteriores não tenham sido satisfeitas.
+
+### Laços de repetição (loop)
+São usados para gerar loops, ou seja, repetir determinado comando até a condição ser satisfeita, são elas `for` e `while`.
+
+#### Exemplo de utilização de `for`
+``` python
+nomes = ['Ana', 'Bruno', 'Carlos']
+for nome in nomes:
+    print(f"Olá, {nome}!")
+```
+Este loop executa uma lista com os uma saudação a todos os nomes presentes na lista.
+
+#### Exemplo de utilização de `while`
+``` python
+contador = 0
+while contador < 5:
+    print(contador)
+    contador += 1
+```
+Este loop com `while` executa o comando enquanto a condição for verdadeira, neste caso, o elemento recebe +1 até que o contador seja >=5
+
+### Controle de fluxo extra
+São utilizados para interromper, continuar ou ignorar determinados códigos, são utilizados `break`, `continue` e `pass`.
+
+#### Exemplo de utilização de `break`
+É utilizado para interromper o loop imediatamente, da seguinte forma:
+``` python
+senha_correta = "python123"
+
+for tentativa in range(3):
+    senha = input("Digite a senha: ")
+    if senha == senha_correta:
+        print("Acesso permitido")
+        break
+    else:
+        print("Senha incorreta")
+```
+
+#### Exemplo de utilização de `continue`
+É utilizado para pular para a próxima iteração, da seguinte forma:
+``` python
+numeros = [5, -3, 8, 0, -1]
+
+for n in numeros:
+    if n < 0:
+        continue
+    print(f"Número positivo ou zero: {n}")
+```
+
+#### Exemlo de utilização de `pass`
+Este normalmente é utilizado durante o planejamento do código, pulando passar para a próxima iteração sem quebrar a estrutura, da seguinte forma:
+``` python
+for letra in "Python":
+    if letra == "h":
+        pass  # Em breve vamos fazer algo aqui...
+    else:
+        print(letra)
+```
+## Funções: definição com `def`, parâmetros e retorno
+Funções são determinadas partes de código que podem ser reutilizáveis para realizar tarefas específicas, ajudando a manter o código organizado e evitando repetições, tornando o código mais legível.
+
+### `def` é utilizado para iniciar a definição da função
+``` python
+def saudacao(): 
+    print("Olá, Wericky! Seja bem-vindo.")
+```
+Aqui temos "`saudacao`" é o nome da função, os `()` indicam que não receberá nenhum parâmentro, o corpo da função é todo o identado abaixo.
+
+### Parâmetros
+Permitem que a função receba informações externas para trabalhar com elas, para esta demonstração, utilizemos o exemplo anterior, adicionando o parâmetro:
+``` python
+def saudacao_pessoal(nome):
+    print(f"Olá, {nome}! Tudo certo?")
+```
+"nome" é o parâmetro adicionado neste exemplo, a função `def` irá pegar o elemento adicionado com este rótulo e utilizará seu valor atribuído
+
+### Retorno (`return`)
+Permite que a função devolva um valor para ser usado em outro lugar. conforme o exemplo:
+``` python
+def soma(a, b):
+    return a + b
+
+resultado = soma(3, 5)
+print(f"A soma é: {resultado}")
+```
+A função neste caso calcula e devolve o valor com o `return`, então o código foi armazenado como "resultado".
