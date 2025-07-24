@@ -99,7 +99,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#como-instalar-pacotes-com-o-pip" id="toc-como-instalar-pacotes-com-o-pip" class="nav-link" data-scroll-target="#como-instalar-pacotes-com-o-pip">Como instalar pacotes com o pip</a></li>
   </ul></li>
-  <li><a href="#aprendendo-o-básico" id="toc-aprendendo-o-básico" class="nav-link" data-scroll-target="#aprendendo-o-básico">Aprendendo o básico</a></li>
+  <li><a href="#conceitos-iniciais" id="toc-conceitos-iniciais" class="nav-link" data-scroll-target="#conceitos-iniciais">Conceitos iniciais</a>
+  <ul class="collapse">
+  <li><a href="#escolha-uma-ide" id="toc-escolha-uma-ide" class="nav-link" data-scroll-target="#escolha-uma-ide">Escolha uma IDE</a></li>
+  <li><a href="#tipos-de-dados" id="toc-tipos-de-dados" class="nav-link" data-scroll-target="#tipos-de-dados">Tipos de dados</a></li>
+  </ul></li>
+  <li><a href="#variáveis-e-operadores-básicos" id="toc-variáveis-e-operadores-básicos" class="nav-link" data-scroll-target="#variáveis-e-operadores-básicos">Variáveis e operadores básicos</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -253,6 +258,7 @@ Importante
 <figcaption>Utilizando o comando <code>git push origin</code> para enviar os commits direto para o repositório no GitHub</figcaption>
 </figure>
 </div>
+<p>Um breve resumo do que utlizamos para verificar, adicionar, realizar o commit e então enviar ao GitHub: <img src="imagens\exemplogitsave.png" class="img-fluid" alt="exemplo de código"></p>
 <p>Agora, indo até o repositório no GitHub, podemos ver que toda a pasta foi adicionada ao repositório</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -326,8 +332,216 @@ Importante
 </ul>
 </section>
 </section>
-<section id="aprendendo-o-básico" class="level2">
-<h2 class="anchored" data-anchor-id="aprendendo-o-básico">Aprendendo o básico</h2>
+<section id="conceitos-iniciais" class="level2">
+<h2 class="anchored" data-anchor-id="conceitos-iniciais">Conceitos iniciais</h2>
+<section id="escolha-uma-ide" class="level3">
+<h3 class="anchored" data-anchor-id="escolha-uma-ide">Escolha uma IDE</h3>
+<p>Integrated Development Environment (IDE) significa ambiente de desenvolvimento integrado, nada mais é que um software que reune ferramentas como editor de código, compilador entre diversas outras ferramentas úteis. a escolha depende de preferências do usuário, dentre algumas das mais populares tem-se:</p>
+<ul>
+<li>Visual studio code (vs code);</li>
+<li>Positron;</li>
+<li>PyCharm;</li>
+<li>Spyder.</li>
+</ul>
+</section>
+<section id="tipos-de-dados" class="level3">
+<h3 class="anchored" data-anchor-id="tipos-de-dados">Tipos de dados</h3>
+<p>Os dados em python podem ser do tipo <code>int</code>, <code>float</code>, <code>str</code> e <code>bool</code></p>
+<ul>
+<li><strong>int</strong> são valores numéricos positivos ou negativos, desconsiderando a parte decimal, utilizado em operações matemáticas ou contagens, como por exemplo</li>
+</ul>
+<div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">{-1000,...,</span> <span class="at">-1,</span> 0, 1, ..., 50}</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li><strong>float</strong> Representa os valores númericos reais com a parte decimal, Utilizado em operações com números não inteiros e medições, por exemplo</li>
+</ul>
+<div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">{14.1,</span> 3.14, 0.001}</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li><strong>str</strong> Representa um texto ou sequência de caracteres, usado para armazenar e manipular informações textuais, por exemplo</li>
+</ul>
+<div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>{<span class="st">"Um exemplo"</span>, <span class="st">"Python3"</span>, <span class="st">"123"</span>}</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li><strong>bool</strong> Representa valores de True (verdadeiro) e False (falso), utilizado para expressões condicionais e lógicas, por exemplo</li>
+</ul>
+<div class="sourceCode" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="dv">33</span> <span class="op">=</span> <span class="dv">0</span> <span class="va">False</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="dv">14</span> <span class="op">&lt;</span> <span class="dv">100</span> <span class="va">True</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="variáveis-e-operadores-básicos" class="level2">
+<h2 class="anchored" data-anchor-id="variáveis-e-operadores-básicos">Variáveis e operadores básicos</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 15%">
+<col style="width: 11%">
+<col style="width: 32%">
+<col style="width: 23%">
+<col style="width: 17%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Tipo</th>
+<th>Operador</th>
+<th>Descrição</th>
+<th>Exemplo</th>
+<th>Resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Aritmético</td>
+<td>+</td>
+<td>Soma</td>
+<td>10 + 7</td>
+<td>17</td>
+</tr>
+<tr class="even">
+<td>Aritmético</td>
+<td>-</td>
+<td>Subtração</td>
+<td>20 - 8</td>
+<td>12</td>
+</tr>
+<tr class="odd">
+<td>Aritmético</td>
+<td>*</td>
+<td>Multiplicação</td>
+<td>3 * 5</td>
+<td>15</td>
+</tr>
+<tr class="even">
+<td>Aritmético</td>
+<td>/</td>
+<td>Divisão</td>
+<td>9 / 2</td>
+<td>4.5</td>
+</tr>
+<tr class="odd">
+<td>Aritmético</td>
+<td>//</td>
+<td>Divisão inteira</td>
+<td>15 // 4</td>
+<td>3</td>
+</tr>
+<tr class="even">
+<td>Aritmético</td>
+<td>%</td>
+<td>Resto da divisão</td>
+<td>22 % 6</td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td>Aritmético</td>
+<td>**</td>
+<td>Potência</td>
+<td>4 ** 2</td>
+<td>16</td>
+</tr>
+<tr class="even">
+<td>Comparação</td>
+<td>==</td>
+<td>Igual a</td>
+<td>8 == 10</td>
+<td>False</td>
+</tr>
+<tr class="odd">
+<td>Comparação</td>
+<td>!=</td>
+<td>Diferente de</td>
+<td>7 != 3</td>
+<td>True</td>
+</tr>
+<tr class="even">
+<td>Comparação</td>
+<td>&gt;</td>
+<td>Maior que</td>
+<td>12 &gt; 9</td>
+<td>True</td>
+</tr>
+<tr class="odd">
+<td>Comparação</td>
+<td>&lt;</td>
+<td>Menor que</td>
+<td>5 &lt; 2</td>
+<td>False</td>
+</tr>
+<tr class="even">
+<td>Comparação</td>
+<td>&gt;=</td>
+<td>Maior ou igual</td>
+<td>6 &gt;= 6</td>
+<td>True</td>
+</tr>
+<tr class="odd">
+<td>Comparação</td>
+<td>&lt;=</td>
+<td>Menor ou igual</td>
+<td>4 &lt;= 1</td>
+<td>False</td>
+</tr>
+<tr class="even">
+<td>Lógico</td>
+<td>and</td>
+<td>E lógico</td>
+<td>True and True</td>
+<td>True</td>
+</tr>
+<tr class="odd">
+<td>Lógico</td>
+<td>or</td>
+<td>Ou lógico</td>
+<td>False or True</td>
+<td>True</td>
+</tr>
+<tr class="even">
+<td>Lógico</td>
+<td>not</td>
+<td>Negação lógica</td>
+<td>not False</td>
+<td>True</td>
+</tr>
+<tr class="odd">
+<td>Atribuição</td>
+<td>=</td>
+<td>Atribuição simples</td>
+<td>y = 10</td>
+<td>y = 10</td>
+</tr>
+<tr class="even">
+<td>Atribuição</td>
+<td>+=</td>
+<td>Soma e atribuição</td>
+<td>y += 2</td>
+<td>y = y + 2</td>
+</tr>
+<tr class="odd">
+<td>Atribuição</td>
+<td>-=</td>
+<td>Subtração e atribuição</td>
+<td>y -= 3</td>
+<td>y = y - 3</td>
+</tr>
+<tr class="even">
+<td>Atribuição</td>
+<td>*=</td>
+<td>Multiplicação e atribuição</td>
+<td>y *= 4</td>
+<td>y = y * 4</td>
+</tr>
+<tr class="odd">
+<td>Atribuição</td>
+<td>/=</td>
+<td>Divisão e atribuição</td>
+<td>y /= 5</td>
+<td>y = y / 5</td>
+</tr>
+<tr class="even">
+<td>Atribuição</td>
+<td>**=</td>
+<td>Potência e atribuição</td>
+<td>y **= 3</td>
+<td>y = y</td>
+</tr>
+</tbody>
+</table>
 </section>
 </section>
 

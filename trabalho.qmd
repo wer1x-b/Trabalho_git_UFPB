@@ -103,6 +103,9 @@ Para enviar o projeto junto a todos os conteúdos salvos em commits, utilizaremo
 
 ![Utilizando o comando ``git push origin`` para enviar os commits direto para o repositório no GitHub](imagens/git_push.png)
 
+Um breve resumo do que utlizamos para verificar, adicionar, realizar o commit e então enviar ao GitHub:
+![exemplo de código](imagens\exemplogitsave.png)
+
 Agora, indo até o repositório no GitHub, podemos ver que toda a pasta foi adicionada ao repositório
 
 ![Note os arquivos da pasta no repositório](imagens\github.png)
@@ -164,4 +167,64 @@ Dentre as bibliotecas mais populares estão:
 - ``Pandas`` Esta biblioteca é usada para facilitar o trabalho com dados estruturados, como tabelas, planilhas, bancos de dados, entre outros. Muito utilizado em ciência de dados e machine learning.
 - ``matplotlib`` serve para criar gráficos e visualizações de dados em Python. É uma das bibliotecas mais populares e versáteis para isso.
 
-## Aprendendo o básico
+## Conceitos iniciais
+
+### Escolha uma IDE
+Integrated Development Environment (IDE) significa ambiente de desenvolvimento integrado, nada mais é que um software que reune ferramentas como editor de código, compilador entre diversas outras ferramentas úteis. a escolha depende de preferências do usuário, dentre algumas das mais populares tem-se:
+
+- Visual studio code (vs code);
+- Positron;
+- PyCharm;
+- Spyder.
+
+### Tipos de dados
+
+Os dados em python podem ser do tipo ``int``, ``float``, ``str`` e ``bool``
+
+- **int** são valores numéricos positivos ou negativos, desconsiderando a parte decimal, utilizado em operações matemáticas ou contagens, como por exemplo 
+``` bash
+{-1000,..., -1, 0, 1, ..., 50}
+```
+
+- **float** Representa os valores númericos reais com a parte decimal, Utilizado em operações com números não inteiros e medições, por exemplo
+``` bash
+{14.1, 3.14, 0.001}
+```
+
+- **str** Representa um texto ou sequência de caracteres, usado para armazenar e manipular informações textuais, por exemplo
+``` python
+{"Um exemplo", "Python3", "123"}
+```
+
+- **bool** Representa valores de True (verdadeiro) e False (falso), utilizado para expressões condicionais e lógicas, por exemplo
+``` python
+33 = 0 False
+14 < 100 True
+```
+## Variáveis e operadores básicos
+
+| Tipo        | Operador | Descrição                  | Exemplo            | Resultado     |
+|-------------|----------|----------------------------|--------------------|---------------|
+| Aritmético  | +        | Soma                       | 10 + 7             | 17            |
+| Aritmético  | -        | Subtração                  | 20 - 8             | 12            |
+| Aritmético  | *        | Multiplicação              | 3 * 5              | 15            |
+| Aritmético  | /        | Divisão                    | 9 / 2              | 4.5           |
+| Aritmético  | //       | Divisão inteira            | 15 // 4            | 3             |
+| Aritmético  | %        | Resto da divisão           | 22 % 6             | 4             |
+| Aritmético  | **       | Potência                   | 4 ** 2             | 16            |
+| Comparação  | ==       | Igual a                    | 8 == 10            | False         |
+| Comparação  | !=       | Diferente de               | 7 != 3             | True          |
+| Comparação  | >        | Maior que                  | 12 > 9             | True          |
+| Comparação  | <        | Menor que                  | 5 < 2              | False         |
+| Comparação  | >=       | Maior ou igual             | 6 >= 6             | True          |
+| Comparação  | <=       | Menor ou igual             | 4 <= 1             | False         |
+| Lógico      | and      | E lógico                   | True and True      | True          |
+| Lógico      | or       | Ou lógico                  | False or True      | True          |
+| Lógico      | not      | Negação lógica             | not False          | True          |
+| Atribuição  | =        | Atribuição simples         | y = 10             | y = 10        |
+| Atribuição  | +=       | Soma e atribuição          | y += 2             | y = y + 2     |
+| Atribuição  | -=       | Subtração e atribuição     | y -= 3             | y = y - 3     |
+| Atribuição  | *=       | Multiplicação e atribuição | y *= 4             | y = y * 4     |
+| Atribuição  | /=       | Divisão e atribuição       | y /= 5             | y = y / 5     |
+| Atribuição  | **=      | Potência e atribuição      | y **= 3            | y = y         |
+
