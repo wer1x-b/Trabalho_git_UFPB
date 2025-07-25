@@ -35,12 +35,12 @@ No entanto, a Microsoft afirmou que estava comprometida em manter o GitHub como 
 ## Primeiros passos
 
 ### Como instalar o Git
-O `Git` pode ser baixado livremente no site oficial no link <https://git-scm.com/downloads>, logo selecionando a versão do seu sistema operacional. conforme imagem a baixo 
+O `Git` pode ser baixado livremente no site oficial no link <https://git-scm.com/downloads>, logo selecionando a versão do seu sistema operacional. conforme imagem a baixo.
 
 ![Página de download do `Git`](imagens\downloadGIT.png)
 
 ::: callout-important
-Siga as indicações do assistente de instalação até que o procedimento seja concluído
+Siga as indicações do assistente de instalação até que o procedimento seja concluído!
 :::
 
 ### Como preparar o GitHub
@@ -48,25 +48,25 @@ Diferente do Git, o GitHub apesar de possuir uma versão para desktop não neces
 
 ![Página oficial do `GitHub`](imagens\criarconta.png)
 
-Os campos a seguir deverão ser preenchidas para prosseguir com a criação de conta
+Os campos a seguir deverão ser preenchidas para prosseguir com a criação de conta.
 
 ![Página de criação de conta](imagens\concluindoconta.png)
 
 Uma vez que a conta tenha sido criada, o usuário estará livre para acessar repositórios e projetos públicos dos demais usuários e também criar repositórios próprios. 
 
 ### Como utilizar estas ferramentas
-Em uma pasta vazia, apertando com o botão direito do mouse, podemos então iniciar o painel de comandos do `Git`, denominado "Bash"
+Em uma pasta vazia, apertando com o botão direito do mouse, podemos então iniciar o painel de comandos do `Git`, denominado "Bash".
 
 ![Abrindo o painel "Bash"](imagens\abrindoBash.png)
 
-Para que possamos utlizar destas ferramentas, necessitamos aprender a utilizar os comandos, como por exemplo o `git init` que serve para inicializar o git
+Para que possamos utlizar destas ferramentas, necessitamos aprender a utilizar os comandos, como por exemplo o `git init` que serve para inicializar o git.
 ``` bash
 git init
 ```
 
 ![console bash executando o comando `Git init`](imagens\git_init.png)
 
-Logo, pode se executar o comando `git status` para verificar possíveis mudanças na pasta observada, neste exemplo, utilizemos uma pasta previamente utilizada
+Logo, pode se executar o comando `git status` para verificar possíveis mudanças na pasta observada, neste exemplo, utilizemos uma pasta previamente utilizada.
 ``` bash
 git status
 ```
@@ -80,44 +80,42 @@ git add .
 
 ![executando o comando `Git add .` no bash](imagens\git_add.png)
 
-Uma vez que todas as modificações desejadas foram adicionadas, pode-se criar uma espécie de "checkpoint" ou seja, um ponto onde o progresso seja salvo, utilizando de um comando chamado de ``git commit``
+Uma vez que todas as modificações desejadas foram adicionadas, pode-se criar uma espécie de "checkpoint" ou seja, um ponto onde o progresso seja salvo, utilizando de um comando chamado de ``git commit``.
 ``` bash
 git commit
 ```
 ![criando um ``Git commit`` no bash](imagens\git_commit.png)
 
-A vantagem de criar Commit´s ao longo do projeto é que pontos de retorno são criados, da seguinte forma, podemos regressar a determinadas etapas do progresso, como uma espécie de "viagem no tempo" revertendo todo o projeto, etapas e arquivos ao exato ponto do commit escolhido, para visualizar os commits, pode ser utilizado o comando ``git log``
+A vantagem de criar Commit´s ao longo do projeto é que pontos de retorno são criados, da seguinte forma, podemos regressar a determinadas etapas do progresso, como uma espécie de "viagem no tempo" revertendo todo o projeto, etapas e arquivos ao exato ponto do commit escolhido, para visualizar os commits, pode ser utilizado o comando ``git log``.
 ``` bash
 git log
 ```
 ![Utilizando o comando ``git log`` para verificar os commits](imagens\git_log.png)
 
-alternativamente podemos utilizar o comando ``git log --oneline`` para verificar esta lista de forma mais compacta, veja o exemplo disto abaixo
+alternativamente podemos utilizar o comando ``git log --oneline`` para verificar esta lista de forma mais compacta, veja o exemplo disto abaixo.
 ``` bash
 git log --oneline
 ```
 
 ![Utilizando o comando ``git log --oneline`` para verificar os commits de forma compacta](imagens\git_logONELINE.png)
 
-Para enviar o projeto junto a todos os conteúdos salvos em commits, utilizaremos o comando ``git push origin`` caso tenhamos clonado a pasta previamente em repositório ou colocamos o link do repositório ao invés de "origin" e então o Git irá agir em conjunto com o Github
+Para enviar o projeto junto a todos os conteúdos salvos em commits, utilizaremos o comando ``git push origin`` caso tenhamos clonado a pasta previamente em repositório ou colocamos o link do repositório ao invés de "origin" e então o Git irá agir em conjunto com o Github.
 
 ![Utilizando o comando ``git push origin`` para enviar os commits direto para o repositório no GitHub](imagens/git_push.png)
 
 Um breve resumo do que utlizamos para verificar, adicionar, realizar o commit e então enviar ao GitHub:
 ![exemplo de código](imagens\exemplogitsave.png)
 
-Agora, indo até o repositório no GitHub, podemos ver que toda a pasta foi adicionada ao repositório
+Agora, indo até o repositório no GitHub, podemos ver que toda a pasta foi adicionada ao repositório.
 
 ![Note os arquivos da pasta no repositório](imagens\github.png)
 
 Alternativamente temos o ``git pull`` que faz o inverso do comando anterior, pois ele "puxa" os arquivos do GitHub para o computador.
 
 Agora que os arquivos estão salvos no repositório, é possível clonar os arquivos para o computador, usanco o comando ``git clone``, acompanhado do **url** do repositório, como mostrado a seguir:
-
 ``` bash
 git clone
 ```
-
 
 ![local de obtenção do url](imagens\urlclone.png)
 
@@ -129,7 +127,7 @@ e então o código poderá ser executado do ``bash`` da seguinte forma:
 Trata-se de uma linguagem de programação criada por Guido van Rossum em meados de 1991, com o objetivo de ser uma linguagem fácil de ler e escrever e com um sintaxe mais intuitiva.
 
 ## Como instalar
-O Python pode ser instalado a partir do site oficial do Python no seguinte link <https://www.python.org/downloads/> e então seguindo o passo a passo de instação
+O Python pode ser instalado a partir do site oficial do Python no seguinte link <https://www.python.org/downloads/> e então seguindo o passo a passo de instação.
 
 ![Site oficial](imagens\instalarpython.png)
 
@@ -147,9 +145,9 @@ Em termos mais simples, pode-se entender da seguinte forma:
 - Pacote é uma caixa de ferramentas;
 - Biblioteca é como um armário com todas as caixas e ferramentas devidamente organizadas
 
-Os pacotes são instalados diretamente pelo terminal de seu sistema operacional, pode-se seguir os seguintes passos
+Os pacotes são instalados diretamente pelo terminal de seu sistema operacional, pode-se seguir os seguintes passos:
 
-1. Abra o terminal de seu sistema operacional, seja ele ``powershell``, ``cmd`` ou qualquer outro de sua preferência e executar o comando
+1. Abra o terminal de seu sistema operacional, seja ele ``powershell``, ``cmd`` ou qualquer outro de sua preferência e executar o comando:
 ``` bash
 pip install <nome do pacote>
 ```
@@ -160,7 +158,7 @@ pip install requests
 ```
 ![O sistema irá procurar e baixar os arquivos](imagens\pipinstall.png)
 
-Dentre as bibliotecas mais populares estão:
+### Dentre as bibliotecas mais populares estão:
 
 | Biblioteca     | Finalidade Principal                             | Usabilidade                                   |
 |----------------|--------------------------------------------------|-----------------------------------------------|
@@ -189,16 +187,17 @@ Integrated Development Environment (IDE) significa ambiente de desenvolvimento i
 ### Boas práticas: comentários, nomes de variáveis, indentação
 Antes de começar a criar um código, é interessante se atentar às boas práticas como uma maneira de organizar o código de uma forma padronizada, visando torná-lo mais organizado e mais fácil compreensão, organização esta que se prova útil tanto no processo de criação do código, como principalmente para revisão e possivelmente otimização futura.
 
-#### Comentários
+- **Comentários**
 Uma forma de explicar o "porquê" ou mesmo descrever de forma objetiva.
 Para adicionar um comentário, basta acrescentar um `#` antes de digitar o comentário, isso fará com que o texto seja ignorado pelo compilador, ou seja, não afete o código.
 ``` python
 #exemplo de comentário
 ```
-#### Nomes de variáveis
+
+- **Nomes de variáveis**
 É interessante utilizar de nomes mais claros e que torne mais simples compreender do que se trata determinada variável, por exemplo, ao invés de se utilizar um `X` ou `Y` pode-se utilizar `desvio_padrao`, `frequencia_de_sorteios` ou qualquer outra nomeação, desde que não se utilize caracteres especiais ou espaços.
 
-#### Identação
+- **Identação**
 A identação consiste em dar um espaço tornando indentificável a parte do código que está contida em determinada função, da seguinte maneira:
 ``` python
 idade = 18
@@ -211,25 +210,27 @@ else:
 ```
 Note que existe um espaçamento nos `print`s, indicando que estão contidos em suas determinadas funções.
 
-### Tipos de dados
-Os dados em python podem ser do tipo ``int``, ``float``, ``str`` e ``bool``
+Além disto, as boas práticas sugerem a utilização de ambientes virtuais (`venv`), que são uma forma de isolar o código das configurações globais do sistema e "congelar" as versões dos softwares e bibliotecas utilizadas na versão escolhida, possibilitando assim que o código se mantenha utilizável e funcional mesmo com o passar do tempo e eventuais atualizações de bibliotecas, ou seja, evitando possíveis conflitos futuros.
 
-- **int** são valores numéricos positivos ou negativos, desconsiderando a parte decimal, utilizado em operações matemáticas ou contagens, como por exemplo 
+### Tipos de dados
+Os dados em python podem ser do tipo ``int``, ``float``, ``str`` e ``bool``.
+
+- **int** são valores numéricos positivos ou negativos, desconsiderando a parte decimal, utilizado em operações matemáticas ou contagens, como por exemplo:
 ``` python
 {-1000,..., -1, 0, 1, ..., 50}
 ```
 
-- **float** Representa os valores númericos reais com a parte decimal, Utilizado em operações com números não inteiros e medições, por exemplo
+- **float** Representa os valores númericos reais com a parte decimal, Utilizado em operações com números não inteiros e medições, por exemplo:
 ``` python
 {14.1, 3.14, 0.001}
 ```
 
-- **str** Representa um texto ou sequência de caracteres, usado para armazenar e manipular informações textuais, por exemplo
+- **str** Representa um texto ou sequência de caracteres, usado para armazenar e manipular informações textuais, por exemplo:
 ``` python
 {"Um exemplo", "Python3", "123"}
 ```
 
-- **bool** Representa valores de True (verdadeiro) e False (falso), utilizado para expressões condicionais e lógicas, por exemplo
+- **bool** Representa valores de True (verdadeiro) e False (falso), utilizado para expressões condicionais e lógicas, por exemplo:
 ``` python
 33 = 0 False
 14 < 100 True
@@ -268,9 +269,9 @@ Também podem ou não ser **mutáveis** admitindo ou não alterações.
 ### Listas (`list`)
 São utilizadas quando os elementos precisam ser modificados, reordenados ou acessados frequentemente.
 
-- mutáveis
-- ordenadas
-- permitem ter valores repetidos
+- mutáveis;
+- ordenadas;
+- permitem ter valores repetidos.
 
 Exemplo de utilização:
 ``` python
@@ -282,11 +283,11 @@ frutas.sort()                  # Ordena
 ```
 
 ### Tuplas (`tuple`)
-São utilizadas quando os elementos não serão alterados, como datas fixas ou coordenadas por exemplo
+São utilizadas quando os elementos não serão alterados, como datas fixas ou coordenadas por exemplo.
 
-- Imutáveis
-- Ordenadas, assim como as `listas`
-- Permitem valores repetidos
+- Imutáveis;
+- Ordenadas, assim como as `listas`;
+- Permitem valores repetidos.
 
 Exemplo de utilização:
 ``` python
@@ -297,10 +298,10 @@ print(cores[0])  # Acessa, mas não pode modificar
 ```
 
 ### Dicionários (`dict`)
-São utilizadas para representar informações com rótulos, podem ser utilizadas em bancos de dados simples ou perfis de usuário por exemplo
+São utilizadas para representar informações com rótulos, podem ser utilizadas em bancos de dados simples ou perfis de usuário por exemplo.
 
-- Mutáveis
-- Não ordenadas
+- Mutáveis;
+- Não ordenadas.
 
 Exemplo de utilização:
 ``` python
@@ -315,10 +316,10 @@ usuario['email'] = 'email.qualquer@email.com'  # Adiciona nova chave
 
 ## Estruturas de controle
 Essas estruturas são o que dão vida ao código, o tornando capaz de tomar decisões ou realizar repetições com base em lógica.
-As estruturas podem ser **condicionais**, **laços de repetição** ou **Controle de fluxo extra**
+As estruturas podem ser **condicionais**, **laços de repetição** ou **Controle de fluxo extra**.
 
 ### Condicionais
-São utilizadas para aplicar condições, determinando alguma ação que possa ou não ocorrer de acordo com o valor do elemento, são elas `if`, `elif` e `else`
+São utilizadas para aplicar condições, determinando alguma ação que possa ou não ocorrer de acordo com o valor do elemento, são elas `if`, `elif` e `else`.
 
 ``` python
 idade = 20                    #Dados fornecidos
@@ -350,7 +351,7 @@ while contador < 5:
     print(contador)
     contador += 1
 ```
-Este loop com `while` executa o comando enquanto a condição for verdadeira, neste caso, o elemento recebe +1 até que o contador seja >=5
+Este loop com `while` executa o comando enquanto a condição for verdadeira, neste caso, o elemento recebe +1 até que o contador seja >=5.
 
 ### Controle de fluxo extra
 São utilizados para interromper, continuar ou ignorar determinados códigos, são utilizados `break`, `continue` e `pass`.
@@ -405,7 +406,7 @@ Permitem que a função receba informações externas para trabalhar com elas, p
 def saudacao_pessoal(nome):
     print(f"Olá, {nome}! Tudo certo?")
 ```
-"nome" é o parâmetro adicionado neste exemplo, a função `def` irá pegar o elemento adicionado com este rótulo e utilizará seu valor atribuído
+"nome" é o parâmetro adicionado neste exemplo, a função `def` irá pegar o elemento adicionado com este rótulo e utilizará seu valor atribuído.
 
 ### Retorno (`return`)
 Permite que a função devolva um valor para ser usado em outro lugar. conforme o exemplo:
@@ -419,14 +420,15 @@ print(f"A soma é: {resultado}")
 A função neste caso calcula e devolve o valor com o `return`, então o código foi armazenado como "resultado".
 
 ## importanto bibliotecas com `import`
-Assim como explicado na seção inicial pip, o pip permite instalar os pacotes no sistema operacional, porém para utilizar estes pacotes no código, utilizamos o comando `import`, conforme o seguinte exemplo
+Assim como explicado na seção inicial pip, o pip permite instalar os pacotes no sistema operacional, porém para utilizar estes pacotes no código, utilizamos o comando `import`, conforme o seguinte exemplo.
 ``` python
 import math
 print(math.sqrt(25))  # Usa função de raiz quadrada da biblioteca math
 ```
 
-Também pode-se adicionar pacotes com um apelido (`alias`), para deixar o código ainda mais "enxuto"
+Também pode-se adicionar pacotes com um apelido (`alias`), para deixar o código ainda mais "enxuto", simplificando o processo de se chamar uma função.
 ``` python
 import numpy as np
 array = np.array([1, 2, 3])
 ```
+Note que bastou utilizar np para chamar a função.
