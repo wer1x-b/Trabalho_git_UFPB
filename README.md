@@ -42,7 +42,7 @@ Este projeto apresenta um manual introdutório sobre as ferramentas **Git**, **G
 2. Instale o Quarto pelo [site oficial](https://quarto.org/).
 3. Clone este repositório:
    ```bash
-   git clone <URL do repositório>
+   git clone https://github.com/wer1x-b/Trabalho_git_UFPB.git
    ```
 4. Abra o arquivo `trabalho.qmd` no VS Code ou outro editor compatível.
 5. Renderize o arquivo com Quarto para visualizar o relatório em HTML.
