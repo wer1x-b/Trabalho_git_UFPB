@@ -36,6 +36,10 @@ Este projeto apresenta um manual introdutório sobre as ferramentas **Git**, **G
 - **Importação de Bibliotecas**
   - Uso do comando `import` e apelidos (`alias`)
 
+## Visualização do trabalho completa
+Para visualizar o trabalho na íntegra, pode acessar a partir deste link:
+<https://wer1x-b.github.io/Trabalho_git_UFPB/>
+
 ## Como executar
 
 1. Instale o Python pelo [site oficial](https://www.python.org/downloads/).
